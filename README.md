@@ -44,7 +44,7 @@ https://g-lovrin.github.io/wiko-csv-final/wiko-stany.csv
 ## 🔄 Automatyzacja
 
 ### Harmonogram aktualizacji:
-- ⏰ **Automatycznie:** co 10 minut
+- ⏰ **Automatycznie:** co 6 godzin
 - 🔄 **Ręcznie:** przycisk "Run workflow" w Actions
 - 📊 **Monitorowanie:** logi w sekcji Actions
 
@@ -93,9 +93,9 @@ produkt_sku,ilosc_wiko,nazwa_produktu,ostatnia_aktualizacja
 
 ### Wskaźniki jakości:
 - **Liczba produktów:** ~1757 (wszystkie z feed WIKO)
-- **Częstotliwość:** aktualizacja co 10 minut
+- **Częstotliwość:** aktualizacja co 6 godzin
 - **Dostępność:** 99.9% (GitHub Pages SLA)
-- **Opóźnienie:** < 2 minuty od zmiany w XML
+- **Opóźnienie:** < 6 godzin od zmiany w XML
 
 ### Alerting:
 - **Brak aktualizacji:** sprawdź Actions
