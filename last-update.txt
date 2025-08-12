@@ -1,4 +1,3 @@
-Ostatnia aktualizacja: 2025-08-12 14:11:25
-Liczba produktów: 15
-Źródło danych: fallback
-Status: ✅ Sukces
+Ostatnia aktualizacja: 2025-08-12 14:21:18
+Liczba produktów: 1757
+Źródło: XML WIKO
