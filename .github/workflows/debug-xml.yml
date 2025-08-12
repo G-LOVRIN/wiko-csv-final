@@ -18,6 +18,10 @@ jobs:
         with:
           python-version: '3.11'
           
+      - name: Install dependencies
+        run: |
+          pip install requests
+          
       - name: Debug XML structure
         run: |
           python3 << 'EOF'
