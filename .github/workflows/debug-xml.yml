@@ -1,0 +1,101 @@
+name: Debug XML Structure
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          
+      - name: Debug XML structure
+        run: |
+          python3 << 'EOF'
+          import requests
+          import xml.etree.ElementTree as ET
+          
+          # Pobierz XML
+          url = 'https://eml.pl/wiko/wiko_lovrin.xml'
+          response = requests.get(url, timeout=30)
+          xml_content = response.text
+          
+          print(f"📊 Rozmiar XML: {len(xml_content)} znaków")
+          
+          # Parsuj XML
+          root = ET.fromstring(xml_content)
+          print(f"🔍 Element główny: {root.tag}")
+          
+          # Pokaż strukturę pierwszego poziomu
+          print("\n📋 Elementy pierwszego poziomu:")
+          child_counts = {}
+          for child in root:
+              if child.tag in child_counts:
+                  child_counts[child.tag] += 1
+              else:
+                  child_counts[child.tag] = 1
+          
+          for tag, count in child_counts.items():
+              print(f"  - {tag}: {count} elementów")
+          
+          # Znajdź pierwsze elementy produktów
+          print("\n🔍 Szukam elementów produktów...")
+          product_elements = (
+              root.findall('.//produkt') or 
+              root.findall('.//product') or 
+              root.findall('.//item') or
+              root.findall('.//towar') or
+              root.findall('.//artykul')
+          )
+          
+          print(f"📦 Znaleziono {len(product_elements)} elementów produktów")
+          
+          # Sprawdź strukturę pierwszych 3 produktów
+          for i, product in enumerate(product_elements[:3]):
+              print(f"\n🏷️ Produkt {i+1} - struktura:")
+              print(f"   Tag: {product.tag}")
+              print(f"   Atrybuty: {product.attrib}")
+              print(f"   Dzieci:")
+              for child in product:
+                  content = child.text[:50] if child.text else "None"
+                  print(f"     - {child.tag}: {content}")
+          
+          # Sprawdź wszystkie unikalne tagi w produktach
+          print(f"\n📝 Wszystkie unikalne pola w pierwszych 10 produktach:")
+          all_fields = set()
+          for product in product_elements[:10]:
+              for child in product:
+                  all_fields.add(child.tag)
+          
+          for field in sorted(all_fields):
+              print(f"  - {field}")
+          
+          # Zapisz przykładowy produkt do pliku
+          if product_elements:
+              with open('sample_product.txt', 'w', encoding='utf-8') as f:
+                  f.write("PRZYKŁADOWY PRODUKT Z XML:\n")
+                  f.write("="*50 + "\n")
+                  sample = product_elements[0]
+                  f.write(f"Tag: {sample.tag}\n")
+                  f.write(f"Atrybuty: {sample.attrib}\n\n")
+                  f.write("Pola:\n")
+                  for child in sample:
+                      f.write(f"{child.tag}: {child.text}\n")
+          
+          print(f"\n✅ Debug zakończony! Sprawdź plik sample_product.txt")
+          EOF
+          
+      - name: Commit debug results
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: '🔍 Debug struktury XML WIKO'
+          file_pattern: 'sample_product.txt'
