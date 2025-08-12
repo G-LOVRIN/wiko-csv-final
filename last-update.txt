@@ -1,3 +1,4 @@
-Ostatnia aktualizacja: 2025-08-12 13:49:24
+Ostatnia aktualizacja: 2025-08-12 13:50:15
 Liczba produktów: 15
-Źródło danych: XML
+Źródło danych: fallback
+Status: ✅ Sukces
