@@ -1,0 +1,23 @@
+PRZYKŁADOWY PRODUKT Z XML:
+==================================================
+Tag: produkt
+Atrybuty: {}
+
+Pola:
+indeks_katalogowy: 000604
+nazwa: 000604 OBRAZEK ANIOŁKI 7x9 CM
+zdjecie: https://wikomistral.ddns.net/Obrazki/000604_000604-606.jpg
+kod_kreskowy: 8057500691131
+rozmiar: 7x9 cm
+vat: 23
+cena_FV_netto: 47,12 PLN
+cena_FV_brutto: 57,96 PLN
+stan_magazynowy: 78
+producent: VALENTI & CO.SRL
+opis_tekstowy: 000605, 000606
+lista_zdjec: None
+jednostka_wymiaru: cm
+szerokosc: 7,000
+wysokosc: 9,000
+cena_IT_netto: 99,00 PLN
+cena_IT_brutto: 121,77 PLN
