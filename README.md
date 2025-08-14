@@ -8,7 +8,7 @@ Automatyczny system synchronizacji stanów magazynowych WIKO z BaseLinker przy u
 
 **🔗 URL dla BaseLinker:**
 ```
-https://g-lovrin.github.io/wiko-csv-final/wiko-stany.csv
+https://g-lovrin.github.io/wiko-csv/wiko-stany.csv
 ```
 
 **📈 Ostatni raport:**
