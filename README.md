@@ -2,7 +2,7 @@
 
 Automatyczny system synchronizacji stanów magazynowych WIKO z BaseLinker przy użyciu GitHub Pages i GitHub Actions.
 
-![GitHub Actions Status](https://github.com/G-LOVRIN/wiko-csv-final/actions/workflows/update-fixed-wiko.yml/badge.svg)
+![GitHub Actions Status](https://github.com/G-LOVRIN/wiko-csv/actions/workflows/update-fixed-wiko.yml/badge.svg)
 
 ## 📊 Status systemu
 
@@ -12,7 +12,7 @@ https://g-lovrin.github.io/wiko-csv-final/wiko-stany.csv
 ```
 
 **📈 Ostatni raport:**
-- [Sprawdź status aktualizacji](https://g-lovrin.github.io/wiko-csv-final/last-update.txt)
+- [Sprawdź status aktualizacji](https://g-lovrin.github.io/wiko-csv/last-update.txt)
 
 ## ⚙️ Konfiguracja BaseLinker
 
@@ -107,7 +107,7 @@ produkt_sku,ilosc_wiko,nazwa_produktu,ostatnia_aktualizacja
 ### Częste problemy:
 
 #### ❌ BaseLinker pobiera kod HTML zamiast CSV
-**Rozwiązanie:** Sprawdź URL - musi być `https://g-lovrin.github.io/wiko-csv-final/wiko-stany.csv`
+**Rozwiązanie:** Sprawdź URL - musi być `https://g-lovrin.github.io/wiko-csv/wiko-stany.csv`
 
 #### ❌ Mała liczba produktów (< 100)
 **Rozwiązanie:** 
@@ -167,8 +167,8 @@ wiko-csv-final/
 5. **Skontaktuj się** z administratorem systemu
 
 ### Przydatne linki:
-- **🔗 CSV dla BaseLinker:** [wiko-stany.csv](https://g-lovrin.github.io/wiko-csv-final/wiko-stany.csv)
-- **📊 Status systemu:** [last-update.txt](https://g-lovrin.github.io/wiko-csv-final/last-update.txt)
+- **🔗 CSV dla BaseLinker:** [wiko-stany.csv](https://g-lovrin.github.io/wiko-csv/wiko-stany.csv)
+- **📊 Status systemu:** [last-update.txt](https://g-lovrin.github.io/wiko-csv/last-update.txt)
 - **🔍 Logi Actions:** [GitHub Actions](../../actions)
 - **⚙️ Ustawienia workflow:** [Workflows](../../tree/main/.github/workflows)
 
