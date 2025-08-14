@@ -20,7 +20,7 @@ https://g-lovrin.github.io/wiko-csv/wiko-stany.csv
 
 1. **Magazyny** → **Magazyny zewnętrzne** → **Dodaj magazyn**
 2. **Typ:** Import CSV
-3. **URL:** `https://g-lovrin.github.io/wiko-csv-final/wiko-stany.csv`
+3. **URL:** `https://g-lovrin.github.io/wiko-csv/wiko-stany.csv`
 4. **Separator:** przecinek (,)
 5. **Kodowanie:** UTF-8
 6. **Pierwsza linia to nagłówki:** ✅ **TAK**
@@ -144,7 +144,7 @@ Jeśli XML feed nie jest dostępny, skontaktuj się z WIKO w sprawie:
 
 ### Struktura repozytorium:
 ```
-wiko-csv-final/
+wiko-csv/
 ├── .github/
 │   └── workflows/
 │       ├── update-fixed-wiko.yml    # Główny workflow
